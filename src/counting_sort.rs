@@ -8,7 +8,7 @@ pub fn sort(arr: &[u8]) -> Vec<u8> {
     for i in 1..0x100 {
         count_arr[i] += count_arr[i - 1];
     }
-    for j in arr {
+    for j in arr.iter().rev() {
         let i = *j as usize;
         sorted_vec[count_arr[i] - 1] = *j; 
         count_arr[i] -= 1;
