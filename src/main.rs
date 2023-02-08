@@ -1,11 +1,10 @@
-
-use linear_sort;
+use linear_sort::bucket_sort;
 
 fn main() {
-    let arr: [u8; 11] = [34, 23, 10, 200, 0, 250, 255, 2, 10, 2, 255];
-    let sorted: Vec<u8> = linear_sort::counting_sort::sort(&arr);
-    println!("Hello, world!");
-    for i in sorted {
+    let arr: [f64; 7] = [0.6, 0.333, 0.2, 0.8, 0.9, 0.87, 0.65];
+    let sorted: Vec<f64> = bucket_sort::sort(&arr);
+    for i in &sorted {
         print!("{} ", i);
     }
+    println!("");
 }
